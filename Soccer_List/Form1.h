@@ -87,24 +87,30 @@ namespace ProjCLR {
 			// 
 			// txt_insertTeam
 			// 
-			this->txt_insertTeam->Location = System::Drawing::Point(12, 26);
+			this->txt_insertTeam->Location = System::Drawing::Point(16, 32);
+			this->txt_insertTeam->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->txt_insertTeam->Name = L"txt_insertTeam";
-			this->txt_insertTeam->Size = System::Drawing::Size(274, 20);
+			this->txt_insertTeam->Size = System::Drawing::Size(364, 22);
 			this->txt_insertTeam->TabIndex = 0;
+			this->txt_insertTeam->TextChanged += gcnew System::EventHandler(this, &Form1::Txt_insertTeam_TextChanged);
 			// 
 			// boxTeamList
 			// 
 			this->boxTeamList->FormattingEnabled = true;
-			this->boxTeamList->Location = System::Drawing::Point(363, 26);
+			this->boxTeamList->ItemHeight = 16;
+			this->boxTeamList->Location = System::Drawing::Point(484, 32);
+			this->boxTeamList->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->boxTeamList->Name = L"boxTeamList";
-			this->boxTeamList->Size = System::Drawing::Size(195, 407);
+			this->boxTeamList->Size = System::Drawing::Size(259, 500);
 			this->boxTeamList->TabIndex = 1;
+			this->boxTeamList->SelectedIndexChanged += gcnew System::EventHandler(this, &Form1::BoxTeamList_SelectedIndexChanged);
 			// 
 			// btn_clearText
 			// 
-			this->btn_clearText->Location = System::Drawing::Point(13, 84);
+			this->btn_clearText->Location = System::Drawing::Point(17, 103);
+			this->btn_clearText->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btn_clearText->Name = L"btn_clearText";
-			this->btn_clearText->Size = System::Drawing::Size(273, 23);
+			this->btn_clearText->Size = System::Drawing::Size(364, 28);
 			this->btn_clearText->TabIndex = 2;
 			this->btn_clearText->Text = L"Limpa a caixa de texto";
 			this->btn_clearText->UseVisualStyleBackColor = true;
@@ -112,9 +118,10 @@ namespace ProjCLR {
 			// 
 			// btn_AddTeam
 			// 
-			this->btn_AddTeam->Location = System::Drawing::Point(13, 113);
+			this->btn_AddTeam->Location = System::Drawing::Point(17, 139);
+			this->btn_AddTeam->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btn_AddTeam->Name = L"btn_AddTeam";
-			this->btn_AddTeam->Size = System::Drawing::Size(273, 23);
+			this->btn_AddTeam->Size = System::Drawing::Size(364, 28);
 			this->btn_AddTeam->TabIndex = 3;
 			this->btn_AddTeam->Text = L"Adiciona a Equipa à lista";
 			this->btn_AddTeam->UseVisualStyleBackColor = true;
@@ -122,9 +129,10 @@ namespace ProjCLR {
 			// 
 			// btn_Initialize
 			// 
-			this->btn_Initialize->Location = System::Drawing::Point(12, 55);
+			this->btn_Initialize->Location = System::Drawing::Point(16, 68);
+			this->btn_Initialize->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btn_Initialize->Name = L"btn_Initialize";
-			this->btn_Initialize->Size = System::Drawing::Size(274, 23);
+			this->btn_Initialize->Size = System::Drawing::Size(365, 28);
 			this->btn_Initialize->TabIndex = 4;
 			this->btn_Initialize->Text = L"Inicializa a Lista";
 			this->btn_Initialize->UseVisualStyleBackColor = true;
@@ -132,9 +140,10 @@ namespace ProjCLR {
 			// 
 			// btn_TeamRemover
 			// 
-			this->btn_TeamRemover->Location = System::Drawing::Point(13, 143);
+			this->btn_TeamRemover->Location = System::Drawing::Point(17, 176);
+			this->btn_TeamRemover->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btn_TeamRemover->Name = L"btn_TeamRemover";
-			this->btn_TeamRemover->Size = System::Drawing::Size(273, 23);
+			this->btn_TeamRemover->Size = System::Drawing::Size(364, 28);
 			this->btn_TeamRemover->TabIndex = 5;
 			this->btn_TeamRemover->Text = L"Remove a Equipa procurada";
 			this->btn_TeamRemover->UseVisualStyleBackColor = true;
@@ -142,9 +151,10 @@ namespace ProjCLR {
 			// 
 			// btn_teamCounter
 			// 
-			this->btn_teamCounter->Location = System::Drawing::Point(12, 173);
+			this->btn_teamCounter->Location = System::Drawing::Point(16, 213);
+			this->btn_teamCounter->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btn_teamCounter->Name = L"btn_teamCounter";
-			this->btn_teamCounter->Size = System::Drawing::Size(147, 23);
+			this->btn_teamCounter->Size = System::Drawing::Size(196, 28);
 			this->btn_teamCounter->TabIndex = 6;
 			this->btn_teamCounter->Text = L"Contagem";
 			this->btn_teamCounter->UseVisualStyleBackColor = true;
@@ -152,25 +162,28 @@ namespace ProjCLR {
 			// 
 			// txt_counter
 			// 
-			this->txt_counter->Location = System::Drawing::Point(165, 175);
+			this->txt_counter->Location = System::Drawing::Point(220, 215);
+			this->txt_counter->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->txt_counter->Name = L"txt_counter";
-			this->txt_counter->Size = System::Drawing::Size(121, 20);
+			this->txt_counter->Size = System::Drawing::Size(160, 22);
 			this->txt_counter->TabIndex = 7;
 			this->txt_counter->TextChanged += gcnew System::EventHandler(this, &Form1::Txt_counter_TextChanged);
 			// 
 			// txt_Searcher
 			// 
-			this->txt_Searcher->Location = System::Drawing::Point(12, 311);
+			this->txt_Searcher->Location = System::Drawing::Point(16, 383);
+			this->txt_Searcher->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->txt_Searcher->Name = L"txt_Searcher";
-			this->txt_Searcher->Size = System::Drawing::Size(116, 20);
+			this->txt_Searcher->Size = System::Drawing::Size(153, 22);
 			this->txt_Searcher->TabIndex = 8;
 			this->txt_Searcher->TextChanged += gcnew System::EventHandler(this, &Form1::Txt_Searcher_TextChanged);
 			// 
 			// btn_Searcher
 			// 
-			this->btn_Searcher->Location = System::Drawing::Point(134, 309);
+			this->btn_Searcher->Location = System::Drawing::Point(179, 380);
+			this->btn_Searcher->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btn_Searcher->Name = L"btn_Searcher";
-			this->btn_Searcher->Size = System::Drawing::Size(96, 23);
+			this->btn_Searcher->Size = System::Drawing::Size(128, 28);
 			this->btn_Searcher->TabIndex = 9;
 			this->btn_Searcher->Text = L"Existe na Lista\?";
 			this->btn_Searcher->UseVisualStyleBackColor = true;
@@ -178,16 +191,18 @@ namespace ProjCLR {
 			// 
 			// txt_yesOrNo
 			// 
-			this->txt_yesOrNo->Location = System::Drawing::Point(236, 311);
+			this->txt_yesOrNo->Location = System::Drawing::Point(315, 383);
+			this->txt_yesOrNo->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->txt_yesOrNo->Name = L"txt_yesOrNo";
-			this->txt_yesOrNo->Size = System::Drawing::Size(52, 20);
+			this->txt_yesOrNo->Size = System::Drawing::Size(68, 22);
 			this->txt_yesOrNo->TabIndex = 10;
 			// 
 			// btn_eliminateFirstFive
 			// 
-			this->btn_eliminateFirstFive->Location = System::Drawing::Point(13, 203);
+			this->btn_eliminateFirstFive->Location = System::Drawing::Point(17, 250);
+			this->btn_eliminateFirstFive->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btn_eliminateFirstFive->Name = L"btn_eliminateFirstFive";
-			this->btn_eliminateFirstFive->Size = System::Drawing::Size(273, 23);
+			this->btn_eliminateFirstFive->Size = System::Drawing::Size(364, 28);
 			this->btn_eliminateFirstFive->TabIndex = 11;
 			this->btn_eliminateFirstFive->Text = L"Elimina os 5 primeiro clubes";
 			this->btn_eliminateFirstFive->UseVisualStyleBackColor = true;
@@ -195,9 +210,10 @@ namespace ProjCLR {
 			// 
 			// btn_lastFiveElimination
 			// 
-			this->btn_lastFiveElimination->Location = System::Drawing::Point(12, 233);
+			this->btn_lastFiveElimination->Location = System::Drawing::Point(16, 287);
+			this->btn_lastFiveElimination->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btn_lastFiveElimination->Name = L"btn_lastFiveElimination";
-			this->btn_lastFiveElimination->Size = System::Drawing::Size(274, 23);
+			this->btn_lastFiveElimination->Size = System::Drawing::Size(365, 28);
 			this->btn_lastFiveElimination->TabIndex = 12;
 			this->btn_lastFiveElimination->Text = L"Elimina os últimos 5 (mesmo que tenha menos)";
 			this->btn_lastFiveElimination->UseVisualStyleBackColor = true;
@@ -205,23 +221,26 @@ namespace ProjCLR {
 			// 
 			// txt_teamSubCheck
 			// 
-			this->txt_teamSubCheck->Location = System::Drawing::Point(13, 360);
+			this->txt_teamSubCheck->Location = System::Drawing::Point(17, 443);
+			this->txt_teamSubCheck->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->txt_teamSubCheck->Name = L"txt_teamSubCheck";
-			this->txt_teamSubCheck->Size = System::Drawing::Size(115, 20);
+			this->txt_teamSubCheck->Size = System::Drawing::Size(152, 22);
 			this->txt_teamSubCheck->TabIndex = 13;
 			// 
 			// txt_teamToSubWith
 			// 
-			this->txt_teamToSubWith->Location = System::Drawing::Point(12, 398);
+			this->txt_teamToSubWith->Location = System::Drawing::Point(16, 490);
+			this->txt_teamToSubWith->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->txt_teamToSubWith->Name = L"txt_teamToSubWith";
-			this->txt_teamToSubWith->Size = System::Drawing::Size(116, 20);
+			this->txt_teamToSubWith->Size = System::Drawing::Size(153, 22);
 			this->txt_teamToSubWith->TabIndex = 14;
 			// 
 			// btn_subTeams
 			// 
-			this->btn_subTeams->Location = System::Drawing::Point(165, 360);
+			this->btn_subTeams->Location = System::Drawing::Point(220, 443);
+			this->btn_subTeams->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btn_subTeams->Name = L"btn_subTeams";
-			this->btn_subTeams->Size = System::Drawing::Size(121, 58);
+			this->btn_subTeams->Size = System::Drawing::Size(161, 71);
 			this->btn_subTeams->TabIndex = 15;
 			this->btn_subTeams->Text = L"Substitui , se existir";
 			this->btn_subTeams->UseVisualStyleBackColor = true;
@@ -229,9 +248,9 @@ namespace ProjCLR {
 			// 
 			// Form1
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(621, 537);
+			this->ClientSize = System::Drawing::Size(828, 661);
 			this->Controls->Add(this->btn_subTeams);
 			this->Controls->Add(this->txt_teamToSubWith);
 			this->Controls->Add(this->txt_teamSubCheck);
@@ -248,6 +267,7 @@ namespace ProjCLR {
 			this->Controls->Add(this->btn_clearText);
 			this->Controls->Add(this->boxTeamList);
 			this->Controls->Add(this->txt_insertTeam);
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"Form1";
 			this->Text = L"Form1";
 			this->ResumeLayout(false);
@@ -325,7 +345,7 @@ private: System::Void Btn_eliminateFirstFive_Click(System::Object^ sender, Syste
 
 	for (int i = 0; i < 5; i++)
 	{	
-		if (counter < 4)
+		if (counter < 5)
 		{
 			boxTeamList->Items->Clear();
 		}
@@ -362,6 +382,10 @@ private: System::Void Btn_subTeams_Click(System::Object^ sender, System::EventAr
 		MessageBox::Show(Convert::ToString(position));
 		boxTeamList->Items[position - 1] = txt_teamToSubWith->Text;
 	}
+}
+private: System::Void Txt_insertTeam_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void BoxTeamList_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
