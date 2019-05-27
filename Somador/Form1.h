@@ -168,7 +168,7 @@ namespace ProjCLR {
 			this->btn_primos->Name = L"btn_primos";
 			this->btn_primos->Size = System::Drawing::Size(131, 43);
 			this->btn_primos->TabIndex = 9;
-			this->btn_primos->Text = L"H· primos\?";
+			this->btn_primos->Text = L"H√° primos\?";
 			this->btn_primos->UseVisualStyleBackColor = true;
 			this->btn_primos->Click += gcnew System::EventHandler(this, &Form1::Btn_primos_Click);
 			// 
@@ -178,7 +178,7 @@ namespace ProjCLR {
 			this->btn_randomNums->Name = L"btn_randomNums";
 			this->btn_randomNums->Size = System::Drawing::Size(131, 42);
 			this->btn_randomNums->TabIndex = 10;
-			this->btn_randomNums->Text = L"Gerar n˙meros";
+			this->btn_randomNums->Text = L"Gerar n√∫meros";
 			this->btn_randomNums->UseVisualStyleBackColor = true;
 			this->btn_randomNums->Click += gcnew System::EventHandler(this, &Form1::Btn_randomNums_Click);
 			// 
@@ -341,15 +341,15 @@ private: System::Void Btn_primos_Click(System::Object^ sender, System::EventArgs
 	{
 		if (firstNum % i == 0) { firstPrime = false;  break; }
 	}
-	for (int i = 2; i < secondNum / 2; i++)
+	for (int i = 2; i < (secondNum / 2) + 1; i++)
 	{
 		if (secondNum % i == 0) { secondPrime = false; break; }
 	}
-	for (int i = 2; i < thirdNum/ 2; i++)
+	for (int i = 2; i < (thirdNum/ 2) + 1; i++)
 	{
 		if (thirdNum % i == 0) { thirdPrime = false;  break; }
 	}
-	for (int i = 2; i < forthNum / 2; i++)
+	for (int i = 2; i < (forthNum / 2)+ 1; i++)
 	{
 		if (forthNum % i == 0) { forthPrime = false;  break; }
 	}
@@ -362,8 +362,8 @@ private: System::Void Btn_primos_Click(System::Object^ sender, System::EventArgs
 
 
 	// if any of these is true, we return that a prime exist
-	if (firstPrime || secondPrime || thirdPrime || forthPrime) 	{  txt_resultados->Text = "Sim, h· primos!" + num1 + num2 + num3 + num4; }
-		else { txt_resultados->Text = "N„o, n„o h· primos!"; }
+	if (firstPrime || secondPrime || thirdPrime || forthPrime) 	{  txt_resultados->Text = "Sim, h√° primos!" + num1 + " " + num2 + " " + num3 + " " + num4; }
+		else { txt_resultados->Text = "N√£o, n√£o h√° primos!"; }
 
 }
 };
