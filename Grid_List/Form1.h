@@ -283,29 +283,60 @@ private: System::Void Btn_showNamesMsgBox_Click(System::Object^ sender, System::
 	private: System::Void Btn_trackName_Click(System::Object^ sender, System::EventArgs^ e) {
 		int numberRows = dataGridView1->Rows->Count; //linhas
 		String^ container_name = txt_localizeName->Text;
+		String^ temporary_name;
 
-	/*	for (int i = 0; i < numberRows; i++)
+		for (int i = 0; i < numberRows; i++)
 		{
-			if (dataGridView1->Rows[i]->Cells[0]->Value->(container_name)
+			//converts the cell value and gives it to the string temp name
+			temporary_name = Convert::ToString(dataGridView1->Rows[i]->Cells[0]->Value);
+
+			if(temporary_name == container_name && temporary_name != "")
 			{
-
+				MessageBox::Show(Convert::ToString(i)); //converts the into to a string to use in messagebox
 			}
-		}*/
-		
-	
-	//MessageBox::Show(Convert::ToString(numberRows)); //converter para string sempre, a message box
-	//for (int i = 0; i < numberRows; i++)
-	//{
-	//	
-	//}
-
-
+		}
 }
 	//eliminate the name given by the user
 private: System::Void Btn_eliminateNameLine_Click(System::Object^ sender, System::EventArgs^ e) {
+	int numberRows = dataGridView1->Rows->Count; //linhas
+	String^ container_name = txt_localizeName->Text;
+	String^ temporary_name;
+
+	for (int i = 0; i < numberRows; i++)
+	{
+		//without try catch, it goes overflow because the row doesn't update after the row is removed
+		try 
+		{
+			temporary_name = Convert::ToString(dataGridView1->Rows[i]->Cells[0]->Value);
+
+			if (temporary_name == container_name)
+			{
+				dataGridView1->Rows->RemoveAt(i);
+			}
+		}
+		catch(...) {}
+	}
+
 }
 	//eliminate the line if the name is empty
 private: System::Void Btn_eliminateEmptyLine_Click(System::Object^ sender, System::EventArgs^ e) {
+	int numberRows = dataGridView1->Rows->Count; //linhas
+	String^ temporary_name;
+
+	for (int i = 0; i < numberRows; i++)
+	{
+		//without try catch, it goes overflow because the row doesn't update after the row is removed
+		try
+		{
+			temporary_name = Convert::ToString(dataGridView1->Rows[i]->Cells[0]->Value);
+
+			if (temporary_name == "")
+			{
+				dataGridView1->Rows->RemoveAt(i);
+			}
+		}
+		catch (...) {}
+	}
 }
 };
 }
